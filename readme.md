@@ -6,6 +6,9 @@
 
 [Live Demo](http://162.243.162.30:3000/)
 
+OR 
+https://aispacedubai.vercel.app/
+
 ## 🌟 Overview
 
 Dubai to the Stars is a groundbreaking space tourism platform that transforms Dubai into humanity's gateway to the cosmos. Our platform offers an intuitive booking experience for various space adventures, from orbital experiences to Mars expeditions.
