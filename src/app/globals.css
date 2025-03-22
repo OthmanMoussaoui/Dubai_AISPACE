@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-space-dark text-white;
+  }
+  
+  /* Apply smooth scrolling to the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-space-blue hover:bg-opacity-90 text-white font-display px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(11,61,145,0.7)];
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-space-light text-space-light font-display px-6 py-3 rounded-md transition-all duration-300 hover:bg-space-light hover:bg-opacity-10 hover:shadow-[0_0_15px_rgba(208,214,249,0.3)];
+  }
+  
+  .card {
+    @apply bg-space-dark/80 backdrop-blur-md rounded-xl p-6 border border-space-light/20 hover:shadow-[0_0_30px_rgba(208,214,249,0.15)] transition-all duration-500;
+  }
+  
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-500;
+  }
+  
+  .heading-1 {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-shadow-glow;
+  }
+  
+  .heading-2 {
+    @apply font-display text-3xl md:text-4xl font-bold text-shadow-subtle;
+  }
+  
+  .heading-3 {
+    @apply font-display text-2xl md:text-3xl font-bold text-shadow-subtle;
+  }
+  
+  /* Text shadow for titles */
+  .text-shadow-glow {
+    text-shadow: 0 0 10px rgba(208, 214, 249, 0.3), 0 0 20px rgba(208, 214, 249, 0.2);
+  }
+  
+  .text-shadow-subtle {
+    text-shadow: 0 0 5px rgba(208, 214, 249, 0.2);
+  }
+  
+  /* Gold glow effect */
+  .gold-glow {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  }
+  
+  /* Gradient text */
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-space-gold to-space-light;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(11, 13, 23, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(208, 214, 249, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(208, 214, 249, 0.5);
+}
+
+/* Space background with stars animation */
+.space-bg {
+  background-color: #0B0D17;
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+  animation: space-float 120s linear infinite;
+}
+
+@keyframes space-float {
+  0% {
+    background-position: 0 0, 40px 60px, 130px 270px;
+  }
+  100% {
+    background-position: 550px 550px, 390px 410px, 380px 520px;
+  }
+}
+
+/* Image hover zoom effect */
+.zoom-on-hover {
+  @apply transition-transform duration-500 ease-in-out;
+}
+
+.zoom-on-hover:hover {
+  @apply scale-110;
+}
+
+/* Glowing border */
+.glow-border {
+  @apply border border-space-light/30 transition-all duration-300;
+}
+
+.glow-border:hover {
+  @apply border-space-gold/70 shadow-[0_0_10px_rgba(255,215,0,0.3)];
+}
+
+/* Shimmer animation for accents */
+.shimmer {
+  background: linear-gradient(
+    90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.2) 50%, 
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+} 
